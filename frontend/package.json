@@ -16,7 +16,7 @@
   "scripts": {
     "devServer": "webpack-dev-server --open --config webpack.dev.js",
     "gradleBuild": "../gradlew devBuild --continuous",
-    "serve": "run-p gradleBuild devServer",
+    "serve": "../gradlew buildBundle && run-p gradleBuild devServer",
     "dist": "webpack"
   }
 }
