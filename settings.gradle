@@ -1,0 +1,5 @@
+rootProject.name = 'kotlinApp'
+
+include 'common'
+include 'backend'
+include 'frontend'
