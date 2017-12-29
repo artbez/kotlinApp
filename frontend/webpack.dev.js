@@ -12,13 +12,13 @@ module.exports = merge(require("./webpack.common.js"), {
         contentBase: "./src/main/web/",
         port: 9000,
         hot: true,
-        // proxy: [
-        //     {
-        //         context: ["/all", "/sessions"],
-        //         target: "http://localhost:8080",
-        //         ws: true
-        //     }
-        // ]
+        proxy: [
+            {
+                context: ["/all"],
+                target: "http://localhost:8080",
+                ws: true
+            }
+        ]
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin()
